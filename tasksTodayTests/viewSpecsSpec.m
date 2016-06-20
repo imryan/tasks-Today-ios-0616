@@ -47,8 +47,6 @@ describe(@"viewSpecs", ^{
 
             return @[event,event2];
         }];
-        
-        
     });
     
 
@@ -69,6 +67,8 @@ describe(@"viewSpecs", ^{
         [tester waitForViewWithAccessibilityLabel:@"eventsView"];
         UITextView *textView= (UITextView *)[tester waitForViewWithAccessibilityLabel:@"events list"];
         expect(textView.text).to.equal(@"testing last year\ntesting last year2");
+        
+        NSLog(@"TEXT: %@", textView.text);
 
     });
     
